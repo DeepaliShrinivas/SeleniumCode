@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Regression Test" thread-count= "3" parallel = "tests" verbose="5">
+
+
+	<test name="Amazon Test">
+	<parameter name="browser" value="chrome" />
+	<parameter name="url" value="https://www.amazon.com.au/" />
+	
+		<classes>
+			<class name="TestNgSessions.AmazonTest" />
+		</classes>
+
+	</test>
+
+
+	<test name="Classic CRM Test">
+	<parameter name="browser" value="firefox" />
+	<parameter name="browser" value="https://classic.freecrm.com/index.html" />
+		<classes>
+			<class name="TestNgSessions.ClassInCrmTest" />
+		</classes>
+
+	</test>
+
+
+</suite>
